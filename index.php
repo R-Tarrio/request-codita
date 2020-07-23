@@ -45,4 +45,4 @@
 	// echo json_encode($_REQUEST);
 	// $msg = json_encode($data);
 
-	mail("xxx@xx.com","Información recibida", $mensaje);
+	// mail("xxx@xx.com","Información recibida", $mensaje);
