@@ -1,0 +1,55 @@
+{
+	"phone":"+584268925431",
+	"correo":"rodrigotarrio2@gmail.com",
+	"Nombre":"Rodrigo Tarrio",
+	"Profecion":"Desarrollador Web",
+	"sobreMi":"Soy programador web, me especializo en distintos lenguajes de programación entre ellos podría mencionar:  php,  html, css, javascript, AJAX, jQuery, Laravel,  VueJs,  bootstrap, entre otros. Durante mi tiempo como programador he podido expandir mi conocimiento y mi experiencia en distintos proyectos, lo cual ha sido muy beneficioso para mi carrera como programador, también me gradué como informático y gracias a ello he podido avanzar constantemente en mi vida profesional",
+	"lenguajes":[
+		{
+			"title":"HTML5",
+			"rate":5,
+			"logo":false
+		},
+		{
+			"title":"Jquery",
+			"rate":5,
+			"logo":false
+		},
+		{
+			"title":"PHP",
+			"rate":5,
+			"logo":false
+		},
+		{
+			"title":"CSS",
+			"rate":4,
+			"logo":false
+		},
+		{
+			"title":"VUEJS",
+			"rate":4,
+			"logo":false
+		},
+		{
+			"title":"MYSQL",
+			"rate":5,
+			"logo":false
+		},
+		{
+			"title":"JAVASCRIPT",
+			"rate":5,
+			"logo":false
+		},
+		{
+			"title":"SASS",
+			"rate":3,
+			"logo":false
+		},
+		{
+			"title":"LARAVEL",
+			"rate":4,
+			"logo":false
+		},
+	],
+	"proyectos":[],
+}
