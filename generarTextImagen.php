@@ -22,8 +22,8 @@
 	$body = json_decode($data);
 	// mail("xxx@xx.com","Información recibida", $_REQUEST);
 
-	$mensaje = "Se ha realizado push:\n";
-	$xml = file_get_contents("https://api.telegram.org/bot1328580552:AAEbPoW6GcDej7e6Q4RXo0s1x5Qee0piNrs/sendMessage?chat_id=".$body->message->chat->id."&text=https://request-codita.herokuapp.com/ImagenText/imagen_compartir.php?text=".urlencode($body->message->text));
+	$mensaje = "<a href='https://request-codita.herokuapp.com/ImagenText/imagen_compartir.php?text=".$body->message->text."' >Ver imagen</a> <b>:)</b>";
+	$xml = file_get_contents("https://api.telegram.org/bot1328580552:AAEbPoW6GcDej7e6Q4RXo0s1x5Qee0piNrs/sendMessage?chat_id=".$body->message->chat->id."&parse_mode=html&text=".$mensaje);
 
 	// curl_setopt($handler, CURLOPT_URL, "'https://mail.google.com/mail/feed/atom?parametro1=p¶metro2=a¶metro3=r"); 
 
