@@ -1,5 +1,12 @@
 {
-  "require": {
-    "ext-gd": "*"
-  }
+    "name": "rodrigo/request-php",
+    "authors": [
+        {
+            "name": "Rodrigo Tarrio",
+            "email": "rodrigotarrio2@gmail.com"
+        }
+    ],
+    "require": {
+    	"ext-gd": "*"
+    }
 }
