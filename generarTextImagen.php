@@ -1,9 +1,7 @@
 <?php
-
-	// $data = [
-	// 	"success" => true,
-	// 	"data" => $_REQUEST
-	// ];
+	include 'vendor/autoload.php';
+	use Jajo\JSONDB;
+	$json_db = new JSONDB( __DIR__ );
 
 	header('Content-Type: application/json');
 	try {
