@@ -31,7 +31,9 @@
 	->from( 'users.json' )
 	->where( [ 'id' => $body->message->from->id ] )
 	->get();
+	
 
+	
 	if(count($users) > 0){
 		$xml = file_get_contents("https://api.telegram.org/bot1328580552:AAEbPoW6GcDej7e6Q4RXo0s1x5Qee0piNrs/sendMessage?chat_id=".$body->message->chat->id."&parse_mode=html&text=".$users[0]["first_name"]);		
 	}else{
@@ -46,6 +48,33 @@
 		);
 	}
 
+	if(preg_match('/^(P:(\d+|\d\.\d{1,4}))$/', $body->message->text)){
+		$precioCambio = explode(":", $body->message->text)[1];
+		$precioCambio = $precioCambio * 1.09;
+		$mensaje = "";
+				
+		$mensaje .= "Diamantes × 110💎 = ".($precioCambio*1)." Bs.\n";
+		$mensaje .= "Diamantes × 341💎 = ".($precioCambio*3)." Bs.\n";
+		$mensaje .= "Diamantes × 572💎 = ".($precioCambio*5)." Bs.\n";
+		$mensaje .= "Diamantes × 1,166💎 = ".($precioCambio*10)." Bs.\n";
+		$mensaje .= "Diamantes × 2,398💎 = ".($precioCambio*20)." Bs.\n";
+		$mensaje .= "Diamantes × 6,160💎 = ".($precioCambio*50)."\n\n";
+		$mensaje .= "Tarjetas\n";
+		$mensaje .= "Tarjeta Semanal 💳= ".($precioCambio*2)." Bs.\n";
+		$mensaje .= "Es en total!¡450 diamantes en total, más la membresía de la tienda de descuentos y otros privilegios! (100 diamantes al instante, 50 diamantes diarios por 7 días)\n\n";
+		$mensaje .= "Tarjeta Mensual 💳= ".($precioCambio*10)." Bs.\n";
+		$mensaje .= "¡2600 diamantes en total, más la membresía de la tienda de descuentos y otros privilegios! (500 diamantes al instante, 70 diamantes diarios por 30 días)\n\n";
+		$mensaje .= "------------------------------------------------------\n";
+		$mensaje .= "MÉTODOS DE PAGOS\n";
+		$mensaje .= "Pago móvil\n";
+		$mensaje .= "04268925431\n";
+		$mensaje .= "26.139.565\n";
+		$mensaje .= "Provincial\n";
+
+
+		$xml = file_get_contents("https://api.telegram.org/bot1328580552:AAEbPoW6GcDej7e6Q4RXo0s1x5Qee0piNrs/sendMessage?chat_id=".$body->message->chat->id."&parse_mode=html&text=".urlencode($mensaje));
+		return true;
+	}
 
 	$mensaje = "<a href='https://request-codita.herokuapp.com/ImagenText/imagen_compartir.php?text=".$body->message->text."' >Ver imagen</a> <b>:)</b>";
 
