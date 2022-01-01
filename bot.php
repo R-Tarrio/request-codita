@@ -53,16 +53,16 @@
 		$precioCambio = $precioCambio * 1.09;
 		$mensaje = "";
 				
-		$mensaje .= "Diamantes × 110💎 = ".($precioCambio*1)." Bs.\n";
-		$mensaje .= "Diamantes × 341💎 = ".($precioCambio*3)." Bs.\n";
-		$mensaje .= "Diamantes × 572💎 = ".($precioCambio*5)." Bs.\n";
-		$mensaje .= "Diamantes × 1,166💎 = ".($precioCambio*10)." Bs.\n";
-		$mensaje .= "Diamantes × 2,398💎 = ".($precioCambio*20)." Bs.\n";
-		$mensaje .= "Diamantes × 6,160💎 = ".($precioCambio*50)."\n\n";
+		$mensaje .= "Diamantes × 110💎 = ".round($precioCambio*1, 1)." Bs.\n";
+		$mensaje .= "Diamantes × 341💎 = ".round($precioCambio*3, 1)." Bs.\n";
+		$mensaje .= "Diamantes × 572💎 = ".round($precioCambio*5, 1)." Bs.\n";
+		$mensaje .= "Diamantes × 1,166💎 = ".round($precioCambio*10, 1)." Bs.\n";
+		$mensaje .= "Diamantes × 2,398💎 = ".round($precioCambio*20, 1)." Bs.\n";
+		$mensaje .= "Diamantes × 6,160💎 = ".round($precioCambio*50, 1)."\n\n";
 		$mensaje .= "Tarjetas\n";
-		$mensaje .= "Tarjeta Semanal 💳= ".($precioCambio*2)." Bs.\n";
+		$mensaje .= "Tarjeta Semanal 💳= ".round($precioCambio*2, 1)." Bs.\n";
 		$mensaje .= "Es en total!¡450 diamantes en total, más la membresía de la tienda de descuentos y otros privilegios! (100 diamantes al instante, 50 diamantes diarios por 7 días)\n\n";
-		$mensaje .= "Tarjeta Mensual 💳= ".($precioCambio*10)." Bs.\n";
+		$mensaje .= "Tarjeta Mensual 💳= ".round($precioCambio*10, 1)." Bs.\n";
 		$mensaje .= "¡2600 diamantes en total, más la membresía de la tienda de descuentos y otros privilegios! (500 diamantes al instante, 70 diamantes diarios por 30 días)\n\n";
 		$mensaje .= "------------------------------------------------------\n";
 		$mensaje .= "MÉTODOS DE PAGOS\n";
