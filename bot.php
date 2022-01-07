@@ -50,7 +50,7 @@
 
 	if(preg_match('/^(P:(\d+|\d\.\d{1,4}))$/', $body->message->text)){
 		$precioCambio = explode(":", $body->message->text)[1];
-		$precioCambio = $precioCambio * 1.09;
+		$precioCambio = $precioCambio * 1.30;
 		$mensaje = "";
 				
 		$mensaje .= "Diamantes × 110💎 = ".round($precioCambio*1, 1)." Bs.\n";
